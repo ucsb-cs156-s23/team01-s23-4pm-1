@@ -13,17 +13,17 @@ const Template = (args) => {
     )
 };
 
-export const Default = Template.bind({});
+export const Create = Template.bind({});
 
-Default.args = {
-    submitText: "Create",
-    submitAction: () => { console.log("Submit was clicked"); }
+Create.args = {
+    buttonLabel: "Create",
+    submitAction: () => { console.log("Create was clicked"); }
 };
 
-export const Show = Template.bind({});
+export const Edit = Template.bind({});
 
-Show.args = {
-    Restaurant: restaurantFixtures.oneRestaurant,
-    submitText: "",
-    submitAction: () => { }
+Edit.args = {
+    initialContents: restaurantFixtures.oneRestaurant,
+    buttonLabel: "Update",
+    submitAction: () => { console.log("Update was clicked");}
 };
